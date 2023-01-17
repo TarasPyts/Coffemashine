@@ -45,7 +45,7 @@ class Coffemashine {
     this.#battery += value;
     console.log('Батарея заряджена на ' + this.#battery + ' %');
   }
-  get all() {
+  getall() {
     console.log('Води лишилось ' + this.#water + ' грам');
     console.log('Кави лишилося ' + this.#amountOfcoffee + ' грам');
     console.log('Молока лишилося ' + this.#milk + ' грам');
@@ -70,9 +70,7 @@ class Coffemashine {
     this.#amountOfcoffee >= 12 ? this.#brewCoffe(12) : console.log('Досип кави');
     this.#water >= 50 ? this.#useWater(50) : console.log('Долий води');
     this.#battery >=1 ? this.#useEnergy(1) : console.log('Постав машинку на зарядку');
-    console.log('Води лишилось ' + this.#water + ' грам');
-    console.log('Кави лишилося ' + this.#amountOfcoffee + ' грам');
-    console.log('Батарея заряджена на ' + this.#battery + ' %');
+    this.getall()
   }
   
   cappucino() {
@@ -80,17 +78,14 @@ class Coffemashine {
     this.#water >= 100 ? this.#useWater(100) : console.log('Долий води');
     this.#milk >= 100 ? this.#useMilk(100) : console.log('Йди купи молока');
     this.#battery >=3 ? this.#useEnergy(3) : console.log('Постав машинку на зарядку');
-    console.log('Води лишилось ' + this.#water + ' грам');
-    console.log('Кави лишилося ' + this.#amountOfcoffee + ' грам');
-    console.log('Молока лишилося ' + this.#milk + ' грам');
-    console.log('Батарея заряджена на ' + this.#battery + ' %');
+    this.getall()
   }
   latte() {
     this.#amountOfcoffee >= 12 ? this.#brewCoffe(12) : console.log('Досип кави');
     this.#water >= 70 ? this.#useWater(70) : console.log('Долий води');
     this.#milk >= 200 ? this.#useMilk(200) : console.log('Йди купи молока');
     this.#battery >=5 ? this.#useEnergy(5) : console.log('Постав машинку на зарядку');
-    get all();
+    this.getall()
   }
 
 }
@@ -98,13 +93,7 @@ class Coffemashine {
 
 let newMachine = new Coffemashine (1000, 1000, 1000, 1000);
 
-newMachine.latte()
-// newMachine.water
-// newMachine.water
-
-// newMachine.getWaterAmount()
-// newMachine.latte()
-// // newMachine.getWaterAmount()
-// newMachine.setWaterAmount()
-// newMachine.getWaterAmount()
-
+newMachine.espresso()
+newMachine.espresso()
+newMachine.espresso()
+newMachine.espresso()
